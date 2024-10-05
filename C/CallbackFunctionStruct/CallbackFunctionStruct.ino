@@ -1,6 +1,10 @@
  /*Husk at tjekke om callback function pointers _IKKE_ er en null pointer.
   Programmet kan crashe, hvis vi ikke gør det. Vi får adgang (dereferenced)
   til memory vi ikke skulle -> segmentation fault.. Eller vi får undefined opførsel i bedste fald-> svært at debugge!!
+
+  Enten check med if(CB->funcX != NULL){doStuff()};
+  eller initialiser structen med null pointers 
+  globalCallbacks = {NULL, NULL};
  */
 
 /*Struct til at indeholde callback funktioner.*/
